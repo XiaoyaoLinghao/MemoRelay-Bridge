@@ -1,0 +1,33 @@
+# 密钥与运行时状态（勿提交）
+config/.master_key
+config/credentials.enc
+config/.initialized
+config/.archive.lock
+config/.last_archive_meta.json
+config/.last_archive_ts
+config/.archive_merge_checkpoint.json
+config/.runtime_status.json
+config/.runtime_status.json.*.tmp
+
+# Python 2.0 core build/test artifacts (not part of the tracked product source)
+__pycache__/
+*.pyc
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+*.db
+*.db-wal
+*.db-shm
+
+# MemoRelay local runtime
+.venv/
+.runtime/
+artifacts/
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.*
+credentials*.json
+runtime.local.json

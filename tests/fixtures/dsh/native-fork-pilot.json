@@ -1,0 +1,178 @@
+{
+  "session-preprod-root": {
+    "header": {
+      "version": 4,
+      "id": "session-preprod-root",
+      "createdAt": 1793500082725,
+      "cwd": "/Users/xiaoyaolinghao/Projects/unified-memory/runtime/codex-preprod-20261101-a/work",
+      "isSeeded": false
+    },
+    "inheritedEventCount": 0,
+    "events": [
+      {
+        "type": "user/message",
+        "seq": 0,
+        "time": 1793500082730,
+        "data": {
+          "id": "1ecb520e-ac39-432d-8281-4a2a3051494d",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "分支测试原始端口为4411"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          }
+        },
+        "surfaceOp": "append"
+      }
+    ]
+  },
+  "session-preprod-child": {
+    "header": {
+      "version": 4,
+      "id": "session-preprod-child",
+      "createdAt": 1793500082731,
+      "cwd": "/Users/xiaoyaolinghao/Projects/unified-memory/runtime/codex-preprod-20261101-a/work",
+      "parentSession": "session-preprod-root",
+      "isSeeded": true
+    },
+    "inheritedEventCount": 1,
+    "events": [
+      {
+        "type": "user/message",
+        "seq": 0,
+        "time": 1793500082730,
+        "data": {
+          "id": "1ecb520e-ac39-432d-8281-4a2a3051494d",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "分支测试原始端口为4411"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          }
+        },
+        "surfaceOp": "append"
+      },
+      {
+        "type": "session/end-seed",
+        "seq": 1,
+        "time": 1793500082730,
+        "data": {
+          "inherited": true
+        }
+      },
+      {
+        "type": "user/message",
+        "seq": 2,
+        "time": 1793500082732,
+        "data": {
+          "id": "b978e207-2c43-456b-930b-9057fd0d5a4f",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "分支新增备份周期为每周"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          }
+        },
+        "surfaceOp": "append"
+      }
+    ]
+  },
+  "session-preprod-grandchild": {
+    "header": {
+      "version": 4,
+      "id": "session-preprod-grandchild",
+      "createdAt": 1793500082732,
+      "cwd": "/Users/xiaoyaolinghao/Projects/unified-memory/runtime/codex-preprod-20261101-a/work",
+      "parentSession": "session-preprod-child",
+      "isSeeded": true
+    },
+    "inheritedEventCount": 3,
+    "events": [
+      {
+        "type": "user/message",
+        "seq": 0,
+        "time": 1793500082730,
+        "data": {
+          "id": "1ecb520e-ac39-432d-8281-4a2a3051494d",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "分支测试原始端口为4411"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          }
+        },
+        "surfaceOp": "append"
+      },
+      {
+        "type": "session/end-seed",
+        "seq": 1,
+        "time": 1793500082730,
+        "data": {
+          "inherited": true
+        }
+      },
+      {
+        "type": "user/message",
+        "seq": 2,
+        "time": 1793500082732,
+        "data": {
+          "id": "b978e207-2c43-456b-930b-9057fd0d5a4f",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "分支新增备份周期为每周"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          }
+        },
+        "surfaceOp": "append"
+      },
+      {
+        "type": "session/end-seed",
+        "seq": 3,
+        "time": 1793500082732,
+        "data": {
+          "inherited": true
+        }
+      },
+      {
+        "type": "user/message",
+        "seq": 4,
+        "time": 1793500082732,
+        "data": {
+          "id": "3876ee2e-eb8a-4358-8726-6837b0376124",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "二级分支新增验收标记为雨燕-53"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          }
+        },
+        "surfaceOp": "append"
+      }
+    ]
+  }
+}

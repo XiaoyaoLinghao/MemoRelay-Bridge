@@ -1,0 +1,33 @@
+[project]
+name = "memorelay-bridge"
+version = "2.0.0rc1"
+description = "MemoRelay-Bridge (Bridge agent adapters) — MemoRelay subsystem"
+requires-python = ">=3.11"
+# Core is standard-library only: the adapter must run on macOS 13 / Intel
+# without the legacy MCP/cryptography chain (AC-41).
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "PyYAML==6.0.3"]
+redaction-yaml = ["PyYAML==6.0.3"]
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"dma" = ["contracts_v1/*", "integrations/dsh/plugin/*.mjs", "integrations/dsh/plugin/README.md"]
+
+[project.scripts]
+memorelay-bridge = "dma.cli:main"
+dma-memory = "dma.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.urls]
+Homepage = "https://github.com/XiaoyaoLinghao/MemoRelay"
+Repository = "https://github.com/XiaoyaoLinghao/MemoRelay-Bridge"

@@ -1,0 +1,37 @@
+{
+  "contract_id": "dma-kw-shared-memory",
+  "contract_version": "1.0",
+  "source_repository": "MemoRelay-Core",
+  "source_path": "MemoRelay-Core/contracts/v1",
+  "source_commit": "9f2466cc2ce3e204b19b038051b74db3205abf52",
+  "source_contract_commit": "9f2466cc2ce3e204b19b038051b74db3205abf52",
+  "source_head_at_vendor": "928a92b101b387c72f3bf206c7095ba0b153a2a7",
+  "source_worktree_clean": true,
+  "contract_content_sha256": "11f62fb24aec62683f47182ab40003b963601df0e3ee33022db1fd9c9990a26e",
+  "vendored_at": "2026-11-01T11:28:34+00:00",
+  "files": {
+    "openapi.json": "7c44f66bc2683e8ccfb6acd3c11ffded61e361eabd1fb9b73537a57251a9ac95",
+    "extraction-output.schema.json": "3abc125a62ca1990e6eafb4bfd131b9ef513a3f9367ea216b26678ab4d1703c9",
+    "semantic-invariants.json": "0e2b0c5d0fe6bf9919e7c21176803644f05ce0666f2605244200153164a0a561",
+    "error-catalog.json": "429a0cc569f6e32175b05dc45c30d691549ec23baf141aa82427c99a4fb3f268",
+    "valid-examples.json": "6bf64086451fb01a48d1a4479008400ad014059420f4c392dc10dc33451ff80f",
+    "invalid-examples.json": "cc286d205527eb3608ff65c634baaa53a0963837f10ffc1db1686886498e2226",
+    "redaction-policy.json": "dbfe907f1c69c043320de2606fb3d2026d2afc5dafac0fe5a9b659d6f5998dc1",
+    "redaction-examples.json": "9e240dfcbde9b9e82699a8b73b8d304f7ef3f2a732539a800898fcad1568a09b",
+    "VERSION.json": "aa5b473bb6f2282b02e4e76250fedf79a8e11369314ad49892d7a297d706a464"
+  },
+  "files_at_pin": {
+    "openapi.json": "7c44f66bc2683e8ccfb6acd3c11ffded61e361eabd1fb9b73537a57251a9ac95",
+    "extraction-output.schema.json": "3abc125a62ca1990e6eafb4bfd131b9ef513a3f9367ea216b26678ab4d1703c9",
+    "semantic-invariants.json": "0e2b0c5d0fe6bf9919e7c21176803644f05ce0666f2605244200153164a0a561",
+    "error-catalog.json": "429a0cc569f6e32175b05dc45c30d691549ec23baf141aa82427c99a4fb3f268",
+    "valid-examples.json": "6bf64086451fb01a48d1a4479008400ad014059420f4c392dc10dc33451ff80f",
+    "invalid-examples.json": "cc286d205527eb3608ff65c634baaa53a0963837f10ffc1db1686886498e2226",
+    "redaction-policy.json": "dbfe907f1c69c043320de2606fb3d2026d2afc5dafac0fe5a9b659d6f5998dc1",
+    "redaction-examples.json": "9e240dfcbde9b9e82699a8b73b8d304f7ef3f2a732539a800898fcad1568a09b",
+    "VERSION.json": "aa5b473bb6f2282b02e4e76250fedf79a8e11369314ad49892d7a297d706a464"
+  },
+  "pin_has_recorded_content": true,
+  "sha256sums_sha256": "487d10764edfccefe2939e44fba69d32f7386c9ccc1e2986abf380a79fa1383a",
+  "note": "Vendored release of KW contracts/v1 pinned to the last commit touching contracts/v1. Later KW code commits do not invalidate the vendoring; a new contracts/v1 commit requires re-vendoring. DMA validates this copy and never edits contract content."
+}

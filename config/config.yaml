@@ -1,0 +1,54 @@
+# Daily Memory Archiver 配置
+# 更新时间: 2026-05-23T13:17:25+08:00
+# api_url / api_token / model → credentials.enc（JSON 加密）
+
+openclaw:
+  agent_id: main
+
+session:
+  key: ""
+  # 多通道：merge_jsonl_keys 按 timestamp 合并后再分析
+  merge_jsonl_keys:
+    - "agent:main:main"
+    - "agent:main:feishu:direct:ou_54f29a98dec7d7b397ace247d534fecf"
+
+archive:
+  trigger_mode: "threshold"
+  threshold:
+    max_input_tokens: 400000
+    check_interval_minutes: 5
+    cooldown_minutes: 45
+  min_new_messages: 1
+  # 距上次成功写入 memory ≥ 该分钟数时，即使未达 token 阈值也进入归档流程（有 ≥1 条检查点后的新消息则写）；0=关闭
+  periodic_archive_minutes: 120
+  compact_only_over_threshold: true
+  compact:
+    max_lines: 400
+
+analyzer:
+  messages_to_analyze: 50
+  chunk_cloud_summary: true
+  max_cloud_summary_chunks: 20
+  # slot_has_substance 判定时检查的消息角色，默认仅 user；可追加 assistant 等
+  substance_roles:
+    - "user"
+  cloud_summarizer:
+    enabled: true
+    # 云端连续失败超过此次数后强制归档（避免 sessions 无限堆积），0=永不强制
+    max_cloud_retry: 20
+
+logging:
+  log_max_bytes: 10485760
+  log_keep_rotations: 5
+  log_max_age_days: 30
+
+output:
+  memory_dir: "~/.openclaw/workspace/memory"
+  # raw_detail: fallback_only | on | off（缺省 fallback_only）
+  #   fallback_only — 正常路径只写 ### 摘要，fallback 路径写原始细节(待补)
+  #   on — 正常路径也写 ### 原始细节（旧行为，回滚用）
+  #   off — 连 fallback 也不写逐字（仅占位）
+  raw_detail: "fallback_only"
+
+skill_version: "1.7.1"
+config_version: "8"

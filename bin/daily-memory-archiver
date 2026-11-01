@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -eu
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+usage() {
+    echo "Usage: $(basename "$0") {init|init --defaults|archive|logs|check|status|creds|help}" >&2
+}
+case "${1:-help}" in
+    init|config)
+        if [ "${2:-}" = "--defaults" ]; then
+            exec bash "$ROOT/scripts/config-manager.sh" init-defaults
+        fi
+        exec bash "$ROOT/scripts/config-manager.sh"
+        ;;
+    archive)
+        shift
+        exec bash "$ROOT/scripts/archive-engine.sh" archive "$@"
+        ;;
+    logs|log-maintenance) exec bash "$ROOT/scripts/archive-engine.sh" log-maintenance ;;
+    check|self-check) exec bash "$ROOT/scripts/self-check.sh" ;;
+    health-check) shift; exec bash "$ROOT/scripts/health-check.sh" "$@" ;;
+    status) exec bash "$ROOT/scripts/config-manager.sh" status ;;
+    creds) exec bash "$ROOT/scripts/config-manager.sh" show ;;
+    # OpenClaw Skill 交互模式：JSON 输出供 LLM 解析
+    interactive|skill)
+        shift
+        exec bash "$ROOT/scripts/skill-interactive.sh" "$@"
+        ;;
+    help|-h|--help) usage; exit 0 ;;
+    *) usage; exit 2 ;;
+esac
