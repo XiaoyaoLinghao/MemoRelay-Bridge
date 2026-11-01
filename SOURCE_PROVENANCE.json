@@ -165,7 +165,7 @@
   "modified_existing_files_sha256": {
     ".gitignore": "87dc0cb947e6c74706a0d112396b1548ddfd86a7a8e64c87ea1132932443a1f2",
     "CLAUDE.md": "fa623be20dacc8e7ac4202274500869e2b6614ce9add96305e1e60a325da3db3",
-    "README.md": "732b07af8660918a1d913330b3d4c825fc21033b738a6944cfaa62b8e2b4b6b9",
+    "README.md": "96bb67e36ffab161ce3f0ed121ce62f2abdaf4d4a00a6f8b6cb0664d059f36e3",
     "pyproject.toml": "1897d631b9beb6903350a695bf45b5ba081cd106900f9984e7509e9422e156a7",
     "src/dma/__init__.py": "2453be525da5c3534c7bbee59b374d227333b94e28f7243a8f0029c179d54070",
     "tests/contract/test_contract_provenance.py": "b0b5aba835de2f62c17e2ab5b5ae3531fc64acf9fea1e7e332beda79de68dbf1",
